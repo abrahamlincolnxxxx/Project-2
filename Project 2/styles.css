@@ -1,0 +1,127 @@
+/* Basic page layout sets the page background and centers content. */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #add8e6;
+}
+
+/* Style for the main heading at the top of the page. */
+h1 {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* The calculator card that contains the display and buttons. */
+.calculator {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
+    overflow: hidden;
+}
+
+/* Grid layout for the buttons area. */
+.buttons-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
+}
+
+/* Display area styling for numbers and expressions. */
+.display {
+    background-color: white;
+    color: black;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    min-height: 40px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+/* Operator row spans the full width of the button grid. */
+.operators {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+/* Ensure operator buttons fill their grid cells cleanly. */
+.operators button {
+    width: 100%;
+    float: none;
+}
+
+/* Numeric button grid layout and spacing. */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 100%;
+}
+
+/* Basic button appearance shared by all buttons. */
+button {
+    background-color: #f0f0f0;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hover effect for all buttons to improve interactivity. */
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Special styling for the equals button to make it stand out. */
+.equals {
+    width: 100%;
+    align-self: stretch;
+    background-color: green;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+}
+
+/* Darker hover state for the equals button. */
+.equals:hover {
+    background-color: darkgreen;
+}
+
+/* Clear button uses a warning-style color to show its action. */
+.clear {
+    background-color: #a00;
+}
+
+/* Clear button hover state for better feedback. */
+.clear:hover {
+    background-color: #c00;
+}
+
+/* Operator class styling is included for future use if needed. */
+.operator {
+    background-color: #f90;
+}
